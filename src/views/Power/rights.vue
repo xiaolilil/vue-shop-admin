@@ -15,19 +15,15 @@
                 </template>
             </el-table-column>
         </el-table>
-
-
-
      </el-card>
  </div>
 </template>
 
 <script>
 import Breadcrumb from '@/components/breadcrumb.vue';
-import { ref } from 'vue';
+import { ref,nextTick } from 'vue';
 import {_getRightsList} from '@/network/roles.js'
 import { getCurrentInstance } from 'vue'
-
  export default {
      components:{
          Breadcrumb,
@@ -48,12 +44,115 @@ import { getCurrentInstance } from 'vue'
             return arr[idx];
         }
 
+        // const titles = ['#','权限名称', '路径', '权限等级']
+        // const widths = ['50px','300px','300px','300px']
+        // const contentHeight = '356px'
+        // const showHeader = true;
+        // const tableHeight = '41px'
+        // const currentActiveRow = ref(0)
+        // const swiperOption = reactive({
+        //     autoHeight: true,
+        //     direction: 'vertical',
+        //     spaceBetween: 0,
+        //     autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        //     autoplayDisableOnInteraction: false
+        //     },
+        //     slidesPerView: 'auto',
+        //     grabCursor: true,
+        //     autoplayDisableOnInteraction: false,
+        //     mousewheelControl: true
+        // })
+    //   nextTick(() => {
+    //     var isScroll = true;
+    //     let div = document.getElementsByClassName("el-table__body-wrapper")[0];
+    //     div.style.height = "290px";
+    //     div.addEventListener( "mouseenter", function() {
+    //       isScroll = false;
+    //     });
+    //    div.addEventListener( "mouseleave", function() {
+    //      isScroll = true;
+    //    });
+    //    let t = document.getElementsByClassName("el-table__body")[0];
+    //    setInterval(() => {
+    //      if (isScroll) {
+    //        var data = rightsList.value[0];
+    //          t.style.transition = "all .5s";
+            //  t.style.marginTop = "-41px";
+        //    setTimeout(() => {
+        //      rightsList.value.push(data);
+        //      t.style.transition = "all .5s";
+        //      t.style.marginTop = "-41px";
+        //    }, 500);
+        //    setTimeout(() => {
+        //      rightsList.value.splice(0, 1);
+        //      t.style.transition = "all 0s ease 0s";
+        //      t.style.marginTop = "0";
+        //    }, 1000);
+        //  }
+    //    }, 1500);
+
+       
+    //  });
+
+
+
+
+
          return{
              rightsList,
              getRights,
              getType,
          }
      },
+//      data(){
+//          return{
+//              rightsList:[]
+//          }
+//      },
+//      methods:{
+//          async getRights(){
+//              const {data:res} = await _getRightsList();
+//             //  if(res.meta.status != 200) proxy.$msg.error('获取权限列表失败');
+//             this.rightsList = res.data;
+//          },
+//                   getType (idx)  {
+//             let arr = ["", "success", "danger"];
+//             return arr[idx];
+//         }
+//      },
+
+//   created() {
+//       this.getRights();
+//       var isScroll = true;
+//       this.$nextTick(() => {
+//         let div = document.getElementsByClassName("el-table__body-wrapper")[0];
+//         div.style.height = "110px";
+//         div.addEventListener( "mouseenter", function() {
+//           isScroll = false;
+//         });
+//        div.addEventListener( "mouseleave", function() {
+//          isScroll = true;
+//        });
+//        let t = document.getElementsByClassName("el-table__body")[0];
+//        setInterval(() => {
+//          if (isScroll) {
+//            var data = this.rightsList[0];
+//            setTimeout(() => {
+//              this.rightsList.push(data);
+//              t.style.transition = "all .5s";
+//              t.style.marginTop = "-41px";
+//            }, 500);
+//            setTimeout(() => {
+//              this.rightsList.splice(0, 1);
+//              t.style.transition = "all 0s ease 0s";
+//              t.style.marginTop = "0";
+//            }, 1000);
+//          }
+//        }, 2500);
+//      });
+//    },
  }
 </script>
 

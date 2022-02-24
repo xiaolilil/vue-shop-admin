@@ -17,6 +17,7 @@ import 'vxe-table/lib/style.css'
 import { message } from '@/utils/resetMessage.js' 
 
 
+
 const app = createApp(App)
 app.config.globalProperties.$msg = message;
 
