@@ -5,9 +5,9 @@ import { getToken } from '@/utils/setMsg.js'
 import store from '../store'
 
 // http://127.0.0.1:8888/api/private/v1/
-// const baseURL = 'https://lianghj.top:8888/api/private/v1/'
+const baseURL = 'https://lianghj.top:8888/api/private/v1/'
 
-const baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// const baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 
 
 
